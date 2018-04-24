@@ -1,3 +1,10 @@
+---
+title: "Movie Review"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE) 
 # load relevant libraries
 library(httr)
 library(jsonlite)
@@ -32,7 +39,7 @@ typeof(data)
 # Manually inspect the returned data and identify the content of interest
 # (which are the movie reviews).
 # Use functions such as `names()`, `str()`, etc.
-View(data)
+# View(data)
 names(data$results)
 
 # Flatten the movie reviews content into a data structure called `reviews`
@@ -48,3 +55,7 @@ full_article <- most_recent$link.url
 # Print out the list.
 information <- list(headline, short_summary, full_article)
 # print(information)
+```
+
+
+
